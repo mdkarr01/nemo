@@ -58,23 +58,23 @@ router.delete('/profile/:user_id', (req, res, next) => {
 // USER PASSWORDS
 
 /* GET /forgot-password. */
-router.get('/forgot-pw', (req, res, next) => {
-  res.send('GET /forgot-pw');
+router.get('/forgot', (req, res, next) => {
+  res.send('GET /forgot');
 });
 
 // PUT /forgot-password
-router.put('/forgot-pw', (req, res, next) => {
-  res.send('PUT /forgot-pw');
+router.put('/forgot', (req, res, next) => {
+  res.send('PUT /forgot');
 });
 
 /* GET /reset-password/:token. */
-router.get('/reset-pw/:token', (req, res, next) => {
-  res.send('GET /reset-pw/:token');
+router.get('/reset/:token', (req, res, next) => {
+  res.send('GET /reset/:token');
 });
 
 // PUT /reset-password/:token
-router.put('/reset-pw/:token', (req, res, next) => {
-  res.send('PUT /reset-pw/:token');
+router.put('/reset/:token', (req, res, next) => {
+  res.send('PUT /reset/:token');
 });
 
 //=======================================
