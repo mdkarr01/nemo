@@ -17,6 +17,8 @@ const reviewsRouter = require('./routes/reviews');
 const app = express();
 
 //Connect to the database
+// const databaseUri = process.env.MONGODB_URI;
+
 mongoose.connect('mongodb://mdkarr01:flexfire1@ds231207.mlab.com:31207/whiskey_test', {
   useNewUrlParser: true
 });
