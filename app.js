@@ -1,14 +1,31 @@
-const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
-const cookieParser = require('cookie-parser');
+const favicon = require('serve-favicon');
 const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const passport = require('passport');
+const User = require('./models/user');
+const session = require('express-session');
+const mongoose = require('mongoose');
+
 
 const indexRouter = require('./routes/index');
 const postsRouter = require('./routes/posts');
 const reviewsRouter = require('./routes/reviews');
 
 const app = express();
+
+//Connect to the database
+mongoose.connect('mongodb://mdkarr01:flexfire1@ds231207.mlab.com:31207/whiskey_test', {
+  useNewUrlParser: true
+});
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () => {
+  console.log('we\'re connected!');
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,6 +38,20 @@ app.use(express.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Configure Passport and Sessions
+app.use(session({
+  secret: 'nellie cat',
+  resave: false,
+  saveUninitialized: true
+}));
+
+passport.use(User.createStrategy());
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+// Mount routes
 
 app.use('/', indexRouter);
 app.use('/posts', postsRouter);
