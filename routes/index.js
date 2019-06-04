@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const {
   postRegister,
-  postLogin
+  postLogin,
+  getLogout
 } = require('../controllers');
 const {
   errorHandler
@@ -39,10 +40,7 @@ router.get('/login', (req, res, next) => {
 router.post('/login', postLogin);
 
 /* GET /logout. */
-router.get('/logout', function (req, res, next) {
-  req.logout();
-  res.redirect('/');
-});
+router.get('/logout', getLogout);
 
 
 //=================================
