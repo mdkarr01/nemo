@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const {
-  getPosts
+  getPosts,
+  newPost
 } = require('../controllers/posts');
 const {
   errorHandler
@@ -11,9 +12,7 @@ const {
 router.get('/', errorHandler(getPosts));
 
 /* GET posts new /posts/new. */
-router.get('/new', (req, res, next) => {
-  res.send('NEW /posts/new');
-});
+router.get('/new', newPost);
 
 /* POST posts create /posts */
 router.post('/', (req, res, next) => {

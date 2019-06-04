@@ -6,5 +6,9 @@ module.exports = {
     res.render('posts/index', {
       posts
     });
+  },
+
+  newPost(req, res, next) {
+    res.render('posts/new');
   }
 }
