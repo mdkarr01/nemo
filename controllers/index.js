@@ -18,6 +18,6 @@ module.exports = {
     passport.authenticate('local', {
       successRedirect: '/',
       failureRedirect: '/login'
-    });
+    })(req, res, next);
   }
 }
