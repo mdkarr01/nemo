@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const {
   getPosts,
-  newPost
+  newPost,
+  createPost
 } = require('../controllers/posts');
 const {
   errorHandler
@@ -15,9 +16,7 @@ router.get('/', errorHandler(getPosts));
 router.get('/new', newPost);
 
 /* POST posts create /posts */
-router.post('/', (req, res, next) => {
-  res.send('CREATE /posts');
-});
+router.post('/', errorHandler(createPost));
 
 /* GET posts show /posts/:id */
 router.get('/:id', (req, res, next) => {
