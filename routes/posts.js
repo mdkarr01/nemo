@@ -4,7 +4,8 @@ const {
   getPosts,
   newPost,
   createPost,
-  showPost
+  showPost,
+  editPost
 } = require('../controllers/posts');
 const {
   errorHandler
