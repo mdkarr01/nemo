@@ -11,4 +11,8 @@
   <%= post.location %>
 </p>
 <p><a href="/posts/<%= post.id %>/edit">Edit Post</a></p>
-<!-- <p><a href="/posts/<%= post.id %>">Delete Post</a></p> -->
+<p>
+  <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+    <input type="submit" class="btn btn-danger" value="Delete">
+  </form>
+</p>

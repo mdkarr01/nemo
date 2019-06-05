@@ -14,7 +14,7 @@ module.exports = {
   },
   //Post Create
   async postCreate(req, res, next) {
-    let post = await Post.create(req.body);
+    let post = await Post.create(req.body.post);
     res.redirect(`/posts/${post.id}`);
   },
   //Post Show
@@ -33,12 +33,13 @@ module.exports = {
   },
   //Post Update
   async postUpdate(req, res, next) {
-    await Post.findByIdAndUpdate(req.params.id, req.body.post);
+    let post = await Post.findByIdAndUpdate(req.params.id, req.body.post);
+    // eval(require('locus'))
     res.redirect(`/posts/${post.id}`);
   },
   //Post Destroy
   async postDestroy(req, res, next) {
-    let posts = await Post.destroy(req.params.id);
+    let post = await Post.findByIdAndDelete(req.params.id, req.body.post);
     res.redirect('/posts/index');
   }
 }
