@@ -25,10 +25,15 @@ module.exports = {
     });
   },
   //Post Edit
-  // async editPost(req, res, next) {
-  //   let post = await Post.findById(req.params.id);
-  //   res.render('posts/edit', {
-  //     post
-  //   });
-  // },
+  async editPost(req, res, next) {
+    let post = await Post.findById(req.params.id);
+    res.render(`posts/edit`, {
+      post
+    });
+  },
+  //Posts Update
+  async updatePost(req, res, next) {
+    let post = await Post.create(req.body);
+    res.redirect(`/posts/${post.id}`);
+  },
 }
