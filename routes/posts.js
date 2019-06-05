@@ -3,7 +3,8 @@ const router = express.Router();
 const {
   getPosts,
   newPost,
-  createPost
+  createPost,
+  showPost
 } = require('../controllers/posts');
 const {
   errorHandler
@@ -19,9 +20,8 @@ router.get('/new', newPost);
 router.post('/', errorHandler(createPost));
 
 /* GET posts show /posts/:id */
-router.get('/:id', (req, res, next) => {
-  res.send('SHOW /posts/:id');
-});
+router.get('/:id', errorHandler(showPost));
+
 /* GET posts edit /posts/:id/edit. */
 router.get('/:id/edit', (req, res, next) => {
   res.send('EDIT /posts/:id/edit');
