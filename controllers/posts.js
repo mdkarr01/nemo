@@ -23,5 +23,12 @@ module.exports = {
     res.render('posts/show', {
       post
     });
-  }
+  },
+  //Post Edit
+  async editPost(req, res, next) {
+    let post = await Post.findById(req.params.id);
+    res.render('posts/edit', {
+      post
+    });
+  },
 }
