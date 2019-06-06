@@ -39,7 +39,7 @@ module.exports = {
   },
   //Post Destroy
   async postDestroy(req, res, next) {
-    let post = await Post.findByIdAndDelete(req.params.id, req.body.post);
-    res.redirect('/posts/index');
+    await Post.findByIdAndRemove(req.params.id);
+    res.redirect('/posts');
   }
 }
