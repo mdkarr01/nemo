@@ -19,10 +19,15 @@ const app = express();
 
 //Connect to the database
 // const databaseUri = process.env.MONGODB_URI;
+const dotenv = require('dotenv').config();
+console.log(process.env.MONGODB_URI);
 
 mongoose.connect('mongodb://mdkarr01:flexfire1@ds231207.mlab.com:31207/whiskey_test', {
   useNewUrlParser: true
 });
+// mongoose.connect(process.env.MONGODB_URI, {
+//   useNewUrlParser: true
+// });
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
