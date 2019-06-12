@@ -49,14 +49,6 @@ module.exports = {
   async postUpdate(req, res, next) {
     //handle deletion of images
     //add new images
-    req.body.post.images = [];
-    for (const file of req.files) {
-      let image = await cloudinary.v2.uploader.upload(file.path);
-      req.body.post.images.push({
-        url: image.secure_url,
-        public_id: image.public_id
-      });
-    }
     let post = await Post.findByIdAndUpdate(req.params.id, req.body.post);
     // eval(require('locus'))
     res.redirect(`/posts/${post.id}`);
