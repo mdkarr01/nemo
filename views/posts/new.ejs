@@ -3,7 +3,7 @@
 <form action="/posts" method="POST" enctype="multipart/form-data">
   <div><input type="text" name="post[title]" placeholder="Title" required></div>
   <div><input type="text" name="post[price]" placeholder="Price" required></div>
-  <div><input type="file" name="images" placeholder="Image upload" accept="images/*" multiple></div>
+  <div><input type="file" name="images" accept="images/*" multiple></div>
   <div><textarea name="post[description]" placeholder="Description" required></textarea></div>
   <div><input type="text" name="post[location]" placeholder="Location" required></div>
   <input type="hidden" name="MAX_FILE_SIZE" value="100000" />

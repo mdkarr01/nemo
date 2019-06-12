@@ -20,6 +20,14 @@ module.exports = {
   },
   //Post Create
   async postCreate(req, res, next) {
+    req.body.post.images = [];
+    for (const file of req.files) {
+      let image = await cloudinary.v2.uploader.upload(file.path);
+      req.body.post.images.push({
+        url: image.secure_url,
+        public_id: image.public_id
+      });
+    }
     let post = await Post.create(req.body.post);
     res.redirect(`/posts/${post.id}`);
   },

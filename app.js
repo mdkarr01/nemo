@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
@@ -19,7 +21,7 @@ const app = express();
 
 //Connect to the database
 // const databaseUri = process.env.MONGODB_URI;
-const dotenv = require('dotenv').config();
+// const dotenv = require('dotenv').config();
 
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true
