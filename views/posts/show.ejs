@@ -10,6 +10,11 @@
 <p>
   <%= post.location %>
 </p>
+<p>
+  <% post.images.forEach(function(image) { %>
+  <img src="<%=image.url %>" width="220px">
+  <% }); %>
+</p>
 <p><a href="/posts/<%= post.id %>/edit"><button>Edit</button></a></p>
 <p>
   <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
