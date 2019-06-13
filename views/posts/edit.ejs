@@ -35,7 +35,7 @@
     let newTotal = existingImages - imgDeletions + imageUploads;
     // debugger;
     if (newTotal > 4) {
-      event.preventDefault;
+      event.preventDefault();
       let removalAmt = newTotal - 4;
       alert(`You have to remove ${removalAmt} image${removalAmt === 1 ? '' : 's'}`);
     }
