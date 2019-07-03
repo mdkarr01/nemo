@@ -48,12 +48,11 @@ module.exports = {
   //Post Update
   async postUpdate(req, res, next) {
     //Find post by id
-    let post = await Post.findByIdAndUpdate(req.params.id, req.body.post);
-    //Check if any posts for deletion
-    if (req.body.deleteImages && req.body.deleteImages.length) {
-      //assign deleteImages from req.body to its own variable
+    let post = await Post.findByIdAndUpdate(req.params.id);
+    //check if any images for deletion
+    if (req.body.image.length <= 4) {
+
     }
-    // eval(require('locus'))
     res.redirect(`/posts/${post.id}`);
   },
   //Post Destroy
