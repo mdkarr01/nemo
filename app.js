@@ -39,6 +39,7 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
+// THIS IS SET TO FALSE BY DEFAULT IF YOU USE post[whatever] IN FORMS CHANGE TO TRUE!!!!!!!
 app.use(express.urlencoded({
   extended: true
 }));

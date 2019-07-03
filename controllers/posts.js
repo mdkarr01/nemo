@@ -48,7 +48,7 @@ module.exports = {
   //Post Update
   async postUpdate(req, res, next) {
     //Find post by id
-    let post = await Post.findById(req.params.id);
+    let post = await Post.findByIdAndUpdate(req.params.id, req.body.post);
     //Check if any posts for deletion
     if (req.body.deleteImages && req.body.deleteImages.length) {
       //assign deleteImages from req.body to its own variable
