@@ -1,3 +1,19 @@
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #map {
+    width: 400px;
+    height: 300px;
+  }
+</style>
+
+
 <h1><%= post.title %>
 </h1>
 
@@ -15,9 +31,24 @@
   <img src="<%=image.url %>" width="220px">
   <% }); %>
 </p>
+<div id='map'></div>
+
 <p><a href="/posts/<%= post.id %>/edit"><button>Edit</button></a></p>
 <p>
   <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
     <input type="submit" class="btn btn-danger" value="Delete">
   </form>
 </p>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoibWRrYXJyMDEiLCJhIjoiY2p4b3Zma2g5MGI1ZDNscXVtYjNjcjR6ZyJ9.Jx5abht67MVH6IP6khTtSQ';
+
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/light-v10',
+    center: [-96, 37.8],
+    zoom: 3
+  });
+
+  // code from the next step will go here!
+</script>
