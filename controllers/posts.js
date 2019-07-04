@@ -89,6 +89,15 @@ module.exports = {
         });
       }
     }
+    //check to see if the location has changed
+    if (req.body.post.location !== post.location) {
+      let response = await geocodingClient
+        .forwardGeocode({
+          query: req.body.post.location,
+          limit: 1
+        })
+        .send();
+    }
     //update the post with any new properties
     post.title = req.body.post.title;
     post.description = req.body.post.description;
