@@ -2,6 +2,7 @@ require('dotenv').config()
 
 const express = require('express');
 const path = require('path');
+const engine = require('ejs-mate');
 // const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
@@ -34,6 +35,7 @@ db.once('open', () => {
 });
 
 // view engine setup
+app.engine('ejs', engine);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
