@@ -59,9 +59,9 @@ module.exports = {
   //Post Update
   async postUpdate(req, res, next) {
     //Find post by id
-    let post = await Post.findByIdAndUpdate(req.params.id);
+    let post = await Post.findById(req.params.id);
     //check if any images for deletion
-    if (req.body.deleteImages, req.body.deleteImages.length) {
+    if (req.body.deleteImages && req.body.deleteImages.length) {
       //assign deleteImages from req.body to its own variable
       let deleteImages = req.body.deleteImages;
       //loop over deleteImages
@@ -97,12 +97,13 @@ module.exports = {
           limit: 1
         })
         .send();
+      post.coordinates = response.body.features[0].geometry.coordinates;
+      post.location = req.body.post.location;
     }
     //update the post with any new properties
     post.title = req.body.post.title;
     post.description = req.body.post.description;
     post.price = req.body.post.price;
-    post.location = req.body.post.location;
     //save the updated post to the database
     post.save();
     //redirect to the show page
