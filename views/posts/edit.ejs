@@ -1,3 +1,5 @@
+<% layout('layouts/boilerplate') -%>
+
 <h1>Edit Post</h1>
 
 <form action="/posts/<%= post.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="postEditForm">
@@ -15,29 +17,7 @@
   </div>
   <div><textarea name="post[description]" placeholder="Description"><%= post.description %></textarea></div>
   <div><input type="text" name="post[location]" placeholder="Location" value="<%= post.location %>"></div>
-  <div><input type="submit" value="Submit"></div>
+  <div><input clASS="btn btn-success" type="submit" value="Submit"></div>
 </form>
 
-<script>
-  //find post edit form
-  let postEditForm = document.getElementById('postEditForm');
-
-  //add event submit listerner to post edit form
-  postEditForm.addEventListener('submit', function (event) {
-    //Find length of uploaded images
-    let imageUploads = document.getElementById('imageUpload').files.length;
-    //Find total number of existing images
-    let existingImages = document.querySelectorAll('.imageDeleteCheckbox').length;
-    //Find number of selected images for deletion
-    let imgDeletions = document.querySelectorAll('.imageDeleteCheckbox:checked').length;
-
-    //Figure out if the form can  be submitted
-    let newTotal = existingImages - imgDeletions + imageUploads;
-    // debugger;
-    if (newTotal > 4) {
-      event.preventDefault();
-      let removalAmt = newTotal - 4;
-      alert(`You have to remove ${removalAmt} (more) image${removalAmt === 1 ? '' : 's'}`);
-    }
-  });
-</script>
+<script src="/javascripts/post-edit.js"></script>
