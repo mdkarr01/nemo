@@ -63,8 +63,15 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// Mount routes
+//Default local variables middleware
+app.use(function(req, res, next) {
+  res.locals.title = 'Surf Shop';
+  res.locals.success = req.session.success || '';
+  res.locals.error = req.session.error || '';
+  next();
+});
 
+// Mount routes
 app.use('/', indexRouter);
 app.use('/posts', postsRouter);
 app.use('/posts/:id/reviews', reviewsRouter);
