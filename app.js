@@ -67,7 +67,7 @@ passport.deserializeUser(User.deserializeUser());
 // set local variables middleware
 app.use(function(req, res, next) {
   // set default page title
-  res.locals.title = 'Surf Shop';
+  res.locals.title = 'Whiskey River';
   // set success flash message
   res.locals.success = req.session.success || '';
   delete req.session.success;
@@ -100,7 +100,7 @@ app.use(function (err, req, res, next) {
   // res.status(err.status || 500);
   // res.render('error');
   console.log(err);
-  req.session.err = err.message;
+  req.session.error = err.message;
   res.redirect('back');
 });
 
