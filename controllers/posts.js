@@ -45,7 +45,7 @@ module.exports = {
   },
   //Post Show
   async postShow(req, res, next) {
-    throw new Error('Oh no!!');
+    throw new Error('Oh No!!');
     let post = await Post.findById(req.params.id);
     res.render('posts/show', {
       post, title: 'All Posts'
