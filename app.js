@@ -7,6 +7,7 @@ const engine = require('ejs-mate');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const chalk = require('chalk');
 const passport = require('passport');
 const User = require('./models/user');
 const session = require('express-session');
@@ -63,13 +64,17 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-//Default local variables middleware
+// set local variables middleware
 app.use(function(req, res, next) {
+  // set default page title
   res.locals.title = 'Surf Shop';
+  // set success flash message
   res.locals.success = req.session.success || '';
   delete req.session.success;
+  // set error flash message
   res.locals.error = req.session.error || '';
   delete req.session.error;
+  // continue on to next function in middleware chain
   next();
 });
 
@@ -79,8 +84,10 @@ app.use('/posts', postsRouter);
 app.use('/posts/:id/reviews', reviewsRouter);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
+app.use(function(req, res, next) {
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
 
 // error handler

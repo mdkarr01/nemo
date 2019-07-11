@@ -12,7 +12,7 @@ module.exports = {
 	// Posts Index
 	async postIndex(req, res, next) {
 		let posts = await Post.find({});
-		res.render('posts/index', { posts });
+		res.render('posts/index', { posts, title: 'Posts Index' });
 	},
 	// Posts New
 	postNew(req, res, next) {
@@ -36,6 +36,7 @@ module.exports = {
 		  .send();
 		req.body.post.coordinates = response.body.features[0].geometry.coordinates;
 		let post = await Post.create(req.body.post);
+		req.session.success = 'Post created successfully!';
 		res.redirect(`/posts/${post.id}`);
 	},
 	// Posts Show
@@ -81,11 +82,21 @@ module.exports = {
 				});
 			}
 		}
+		// check if location was updated
+		if(req.body.post.location !== post.location) {
+			let response = await geocodingClient
+			  .forwardGeocode({
+			    query: req.body.post.location,
+			    limit: 1
+			  })
+			  .send();
+			post.coordinates = response.body.features[0].geometry.coordinates;
+			post.location = req.body.post.location;
+		}
 		// update the post with any new properties
 		post.title = req.body.post.title;
 		post.description = req.body.post.description;
 		post.price = req.body.post.price;
-		post.location = req.body.post.location;
 		// save the updated post into the db
 		post.save();
 		// redirect to show page
