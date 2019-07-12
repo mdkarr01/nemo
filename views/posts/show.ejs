@@ -54,16 +54,3 @@
 </div>
 <hr>
 <% }); %>
-
-<script>
-  var post = <%- JSON.stringify(post) %>;
-</script>
-
-<script>
-  $('.toggle-edit-form').on('click', function () {
-    $(this).text() === 'Edit' ? $(this).text('Cancel') : $(this).text('Edit');
-    $(this).siblings('.edit-review-form').toggle();
-  })
-</script>
-
-<script src="/javascripts/post-show.js"></script>
