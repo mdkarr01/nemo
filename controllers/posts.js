@@ -49,7 +49,8 @@ module.exports = {
 				sort: { _id: - 1 }
 			},
 			populate: {
-				path: 'author'
+				path: 'author',
+				model: 'User'
 			}
 		});
 		res.render('posts/show', { post });

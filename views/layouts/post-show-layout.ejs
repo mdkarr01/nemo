@@ -11,7 +11,8 @@
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
   <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
   <link rel='stylesheet' href='/stylesheets/post-show.css' />
 </head>
 
@@ -20,9 +21,9 @@
   <% include ../partials/flash-messages %>
   <%- body -%>
   <script>
-		var post = <%- JSON.stringify(post) %>;
-	</script>
-	<script src="/javascripts/post-show.js"></script>
+    var post = <% - JSON.stringify(post) %>;
+  </script>
+  <script src="/javascripts/post-show.js"></script>
 </body>
 
 </html>
