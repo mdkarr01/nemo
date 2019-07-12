@@ -20,7 +20,7 @@
 </p>
 <div id='map'></div>
 
-<p><a href="/posts/<%= post.id %>/edit"><button>Edit</button></a></p>
+<p><a href="/posts/<%= post.id %>/edit"><button class="btn btn-warning">Edit</button></a></p>
 <p>
   <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
     <input type="submit" class="btn btn-danger" value="Delete">
@@ -41,11 +41,15 @@
   Review: <%= review.body %>
 </div>
 <div>
-  <button class="toggle-edit-form">Edit</button>
+  <button class="toggle-edit-form btn btn-warning">Edit</button>
   <form action="/posts/<%= post.id %>/reviews/<%= review.id %>?_method=PUT" method="POST" class="edit-review-form">
     <textarea name="review[body]" required><%= review.body %></textarea>
-    <input type="number" name="review[rating]" min="1" max="5" step="1" placeholder="1" value="<%= review.rating %>" required>
-    <button type="submit">Update</button>
+    <input type="number" name="review[rating]" min="1" max="5" step="1" placeholder="1" value="<%= review.rating %>"
+      required>
+    <button type="submit" class="btn btn-success">Update</button>
+  </form>
+  <form action="/posts/<%= post.id %>/reviews/<%= review.id %>?_method=DELETE" method="POST">
+    <input type="submit" class="btn btn-danger" value="Delete">
   </form>
 </div>
 <hr>
@@ -56,8 +60,9 @@
 </script>
 
 <script>
-  $('.toggle-edit-form').on('click', function() {
+  $('.toggle-edit-form').on('click', function () {
     $(this).text() === 'Edit' ? $(this).text('Cancel') : $(this).text('Edit');
+    $(this).siblings('.edit-review-form').toggle();
   })
 </script>
 

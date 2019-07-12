@@ -19,19 +19,15 @@ module.exports = {
 	},
 	// Reviews Update
 	async reviewUpdate(req, res, next) {
-		let review = await Review.findById(req.params.id);
-		post.review.body = req.body.review.body;
-		post.review.rating = req.body.review.rating;
-		// save the updated post into the db
-		post.save();
+		await Review.findByIdAndUpdate(req.params.review_id, req.body.review);
+		req.session.success = "Post successfully updated";
 		// redirect to show page
-		res.redirect(`/posts/${post.id}`);
+		res.redirect(`/posts/${req.params.id}`);
 	},
 	// Reviews Destroy
 	async reviewDestroy(req, res, next) {
-		let review = await Review.findById(req.params.id);
-		await review.remove();
+		await Review.findByIdAndDelete(req.params.review_id);
+		req.session.success = "Post successfully deleted";
 		res.redirect('/posts');
 	}
 }
-
