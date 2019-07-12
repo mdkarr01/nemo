@@ -25,7 +25,7 @@ const app = express();
 // const databaseUri = process.env.MONGODB_URI;
 // const dotenv = require('dotenv').config();
 
-mongoose.connect(process.env.MONGODB_URI2, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true
 });
 
@@ -65,7 +65,13 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // set local variables middleware
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
+  //set up a default user who is always logged in (TESTING PURPOSES ONLY)
+  req.user = {
+    "_id": "5d28e34e2b9bd21f167df772",
+    "username": "mike"
+  }
+  req.locals.currentUser = req.user;
   // set default page title
   res.locals.title = 'Whiskey River';
   // set success flash message
@@ -84,7 +90,7 @@ app.use('/posts', postsRouter);
 app.use('/posts/:id/reviews', reviewsRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   const err = new Error('Not Found');
   err.status = 404;
   next(err);

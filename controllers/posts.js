@@ -47,6 +47,9 @@ module.exports = {
 			path: 'reviews',
 			options: {
 				sort: { _id: - 1 }
+			},
+			populate: {
+				path: 'author'
 			}
 		});
 		res.render('posts/show', { post });
