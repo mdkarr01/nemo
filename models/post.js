@@ -11,6 +11,10 @@ const PostSchema = new Schema({
   }],
   location: String,
   coordinates: Array,
+  createdAt: {
+    type: Date,
+    default: Date.now
+  },
   author: {
     type: Schema.Types.ObjectId,
     ref: "User"
