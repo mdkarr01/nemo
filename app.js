@@ -71,6 +71,7 @@ app.use(function (req, res, next) {
     "_id": "5d28e34e2b9bd21f167df772",
     "username": "mike"
   }
+  //=====================================================================
   res.locals.currentUser = req.user;
   // set default page title
   res.locals.title = 'Whiskey River';
