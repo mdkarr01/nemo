@@ -5,7 +5,7 @@
 <form action="/posts/<%= post.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="postEditForm">
   <!-- If you use the post[xxx] syntax change app.use(express.urlencoded({
   extended: true
-})); to TRUE!!!  (it defaults to false on initial setup from bootrap express.js) -->
+})); to TRUE!!!  (it defaults to false on initial setup from express generator) -->
   <div><input type="text" name="post[title]" placeholder="Title" value="<%= post.title %>"></div>
   <div><input type="text" name="post[price]" placeholder="Price" value="<%= post.price %>"></div>
   <div>
