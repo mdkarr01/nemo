@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router({
   mergeParams: true
 });
@@ -6,18 +6,16 @@ const {
   reviewCreate,
   reviewUpdate,
   reviewDestroy
-} = require('../controllers/reviews');
-const {
-  asyncErrorHandler, isReviewAuthor
-} = require('../middleware');
+} = require("../controllers/reviews");
+const { asyncErrorHandler, isReviewAuthor } = require("../middleware");
 
 /* POST reviews create /posts/:id/reviews */
-router.post('/', asyncErrorHandler(reviewCreate));
+router.post("/", asyncErrorHandler(reviewCreate));
 
 /* PUT reviews update /posts/:id/reviews/:review_id  */
-router.put('/:review_id', isReviewAuthor, asyncErrorHandler(reviewUpdate));
+router.put("/:review_id", isReviewAuthor, asyncErrorHandler(reviewUpdate));
 
 /* DELETE reviews destroy /posts/:id/reviews/:review_id  */
-router.delete('/:review_id', asyncErrorHandler(reviewDestroy));
+router.delete("/:review_id", asyncErrorHandler(reviewDestroy));
 
 module.exports = router;
