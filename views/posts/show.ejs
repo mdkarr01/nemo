@@ -28,7 +28,7 @@
 </div>
 <h2>Create a Review</h2>
 <form action="/posts/<%= post.id %>/reviews" method="POST">
-  <input type="text name="review[reviewTitle]" id="title" required>
+  <input type="text" name="review[title]" id="title" required>
   <textarea name="review[body]" required></textarea>
   <input type="number" name="review[rating]" min="1" max="5" step="1" placeholder="0" required>
   <button type="submit">Submit</button>
@@ -37,10 +37,10 @@
 <% post.reviews.forEach(function(review) { %>
 <div>
   <h3>Reviews</h3>
-  Title: <%= review.reviewTitle %><br>
+  Title: <%= review.title %><br>
+  Author: <%= review.author.username %><br>
   Rating: <%= review.rating %><br>
   Review: <%= review.body %>
-  Author: <%= review.author.username %><br>
 </div>
 <% if(review.author.equals(currentUser._id)) { %>
 <div>
