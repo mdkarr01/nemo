@@ -4,41 +4,43 @@
 <h1><%= post.title %>
 </h1>
 
-<p>
+<div>
   <%= post.price %>
-</p>
-<p>
+</div>
+<div>
   <%= post.description %>
-</p>
-<p>
+</div>
+<div>
   <%= post.location %>
-</p>
-<p>
+</div>
+<div>
   <% post.images.forEach(function(image) { %>
   <img src="<%=image.url %>" width="220px">
   <% }); %>
-</p>
+</div>
 <div id='map'></div>
 
-<p><a href="/posts/<%= post.id %>/edit"><button class="btn btn-warning">Edit</button></a></p>
-<p>
+<div><a href="/posts/<%= post.id %>/edit"><button class="btn btn-warning">Edit</button></a></div>
+<div>
   <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
     <input type="submit" class="btn btn-danger" value="Delete">
   </form>
-</p>
+</div>
 <h2>Create a Review</h2>
 <form action="/posts/<%= post.id %>/reviews" method="POST">
+  <input type="text name="review[reviewTitle]" required>
   <textarea name="review[body]" required></textarea>
-  <input type="number" name="review[rating]" min="1" max="5" step="1" placeholder="1" required>
+  <input type="number" name="review[rating]" min="1" max="5" step="1" placeholder="0" required>
   <button type="submit">Submit</button>
 </form>
 <!-- Display all reviews -->
 <% post.reviews.forEach(function(review) { %>
 <div>
   <h3>Reviews</h3>
-  Author: <%= review.author.username %><br>
+  Title: <%= review.reviewTitle %><br>
   Rating: <%= review.rating %><br>
   Review: <%= review.body %>
+  Author: <%= review.author.username %><br>
 </div>
 <% if(review.author.equals(currentUser._id)) { %>
 <div>
