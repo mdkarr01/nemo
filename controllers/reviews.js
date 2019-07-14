@@ -20,14 +20,17 @@ module.exports = {
 	// Reviews Update
 	async reviewUpdate(req, res, next) {
 		await Review.findByIdAndUpdate(req.params.review_id, req.body.review);
-		req.session.success = "Post successfully updated";
+		req.session.success = "Review successfully updated";
 		// redirect to show page
 		res.redirect(`/posts/${req.params.id}`);
 	},
 	// Reviews Destroy
 	async reviewDestroy(req, res, next) {
-		// await Review.findByIdAndDelete(req.params.review_id);
-		// req.session.success = "Post successfully deleted";
-		// res.redirect('/posts');
+		await Post.findByIdAndUpdate(req.params.id, {
+			$pull: { reviews: req.params.review_id }
+		});
+		await Review.findByIdAndRemove(req.params.review_id);
+		req.session.success = "Review successfully removed";
+		res.redirect(`/posts/${req.params.id}`);
 	}
 }
