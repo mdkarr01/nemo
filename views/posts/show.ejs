@@ -34,10 +34,10 @@
   <button type="submit">Submit</button>
 </form>
 <!-- Display all reviews -->
+<h3 style="text-decoration: underline; padding-bottom: 2rem;"><u>Reviews</u></h3>
 <% post.reviews.forEach(function(review) { %>
 <div>
-  <h3>Reviews</h3>
-  Title: <%= review.title %><br>
+  <h4><%= review.title %></h4><br>
   Author: <%= review.author.username %><br>
   Rating: <%= review.rating %><br>
   Review: <%= review.body %>
