@@ -5,16 +5,16 @@ module.exports = {
   // Reviews Create
   async reviewCreate(req, res, next) {
     // Find the post by ID
-    let post = await Post.findById(req.params.id);
-    //   .populate("reviews")
-    //   .exec();
-    // let haveReviewed = post.reviews.filter(review => {
-    //   return review.author.equals(req.user._id);
-    // }).length;
-    // if (haveReviewed) {
-    //   req.session.error = "You may only create one review per post";
-    //   return res.redirect(`/posts/${post.id}`);
-    // }
+    let post = await Post.findById(req.params.id)
+      .populate('reviews')
+      .exec();
+    let haveReviewed = post.reviews.filter(review => {
+      return review.author.equals(req.user._id);
+    }).length;
+    if (haveReviewed) {
+      req.session.error = "You may only create one review per post";
+      return res.redirect(`/posts/${post.id}`);
+    }
     //Create the Review
     req.body.review.author = req.user._id;
     let review = await Review.create(req.body.review);
@@ -41,4 +41,4 @@ module.exports = {
     req.session.success = "Review successfully removed";
     res.redirect(`/posts/${req.params.id}`);
   }
-};
+}
