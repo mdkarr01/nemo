@@ -60,6 +60,7 @@
 <div>
   <button class="toggle-edit-form btn btn-warning">Edit</button>
   <form action="/posts/<%= post.id %>/reviews/<%= review.id %>?_method=PUT" method="POST" class="edit-review-form">
+    <div>Title: <input type="text" name="review[title]" value="<%= review.title %>"></div>
     <textarea name="review[body]" required><%= review.body %></textarea>
     <fieldset class="starability-basic">
       <legend>Rating:</legend>
