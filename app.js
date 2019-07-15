@@ -13,7 +13,11 @@ const User = require('./models/user');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
+const mongoosePaginate = require('mongoose-paginate');
 
+//Create 40 new posts for testing purposes
+const seedPosts = require('./seeds');
+seedPosts();
 
 const indexRouter = require('./routes/index');
 const postsRouter = require('./routes/posts');
@@ -21,9 +25,6 @@ const reviewsRouter = require('./routes/reviews');
 
 const app = express();
 
-//Connect to the database
-// const databaseUri = process.env.MONGODB_URI;
-// const dotenv = require('dotenv').config();
 
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true
