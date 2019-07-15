@@ -85,9 +85,15 @@
     $('#edit-rate<%= review.rating %>').prop('checked', true);
   </script>
   <form action="/posts/<%= post.id %>/reviews/<%= review.id %>?_method=DELETE" method="POST">
-    <input type="submit" class="btn btn-danger" value="Delete">
+    <input type="submit" class="btn btn-danger confirmation" value="Delete">
   </form>
 </div>
 <% } %>
 <hr>
 <% }); %>
+
+<script type="text/javascript">
+  $('.confirmation').on('click', function () {
+    return confirm('Are you sure you would like to delete?');
+  });
+</script>
