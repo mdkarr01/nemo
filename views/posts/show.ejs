@@ -1,29 +1,19 @@
 <% layout('layouts/post-show-layout') -%>
-
-
-<h1><%= post.title %>
-</h1>
-
-<div>
-  <%= post.price %>
-</div>
-<div>
-  <%= post.description %>
-</div>
-<div>
-  <%= post.location %>
-</div>
+<h1><%= post.title %></h1>
+<div>Price: <%= post.price %></div>
+<div><%= post.description %></div>
+<div><%= post.location %></div>
 <div>
   <% post.images.forEach(function(image) { %>
-  <img src="<%=image.url %>" width="220px">
+  <img src="<%= image.url %>" alt="Surf board image" width="200px">
   <% }); %>
 </div>
 <div id='map'></div>
 
-<div><a href="/posts/<%= post.id %>/edit"><button class="btn btn-warning">Edit</button></a></div>
+<div><a href="/posts/<%= post.id %>/edit"><button>Edit</button></a></div>
 <div>
   <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
-    <input type="submit" class="btn btn-danger" value="Delete">
+    <input type="submit" value="Delete">
   </form>
 </div>
 <h2>Create a Review</h2>
@@ -32,7 +22,7 @@
   <textarea name="review[body]" required></textarea>
   <fieldset class="starability-basic">
     <legend>Rating:</legend>
-    <button class="clear-rating" type="button">Clear Rating</button>
+    <!-- <button class="clear-rating" type="button">Clear Rating</button> -->
     <input type="radio" id="rate0" class="input-no-rate" name="review[rating]" value="0" checked
       aria-label="No rating." />
     <input type="radio" id="rate1" name="review[rating]" value="1" />
@@ -59,13 +49,13 @@
 </div>
 <% if(review.author.equals(currentUser._id)) { %>
 <div>
-  <button class="toggle-edit-form btn btn-warning">Edit</button>
+  <button class="toggle-edit-form">Edit</button>
   <form action="/posts/<%= post.id %>/reviews/<%= review.id %>?_method=PUT" method="POST" class="edit-review-form">
     <div>Title: <input type="text" name="review[title]" value="<%= review.title %>"></div>
     <textarea name="review[body]" required><%= review.body %></textarea>
     <fieldset class="starability-basic">
       <legend>Rating:</legend>
-      <button class="clear-rating" type="button">Clear Rating</button>
+      <!-- <button class="clear-rating" type="button">Clear Rating</button> -->
       <input type="radio" id="edit-rate0" class="input-no-rate" name="review[rating]" value="0" checked
         aria-label="No rating." />
       <input type="radio" id="edit-rate1" name="review[rating]" value="1" />
@@ -79,13 +69,13 @@
       <input type="radio" id="edit-rate5" name="review[rating]" value="5" />
       <label for="edit-rate5" title="Amazing">5 stars</label>
     </fieldset>
-    <button type="submit" class="btn btn-success">Update</button>
+    <button type="submit">Update</button>
   </form>
   <script>
     $('#edit-rate<%= review.rating %>').prop('checked', true);
   </script>
   <form action="/posts/<%= post.id %>/reviews/<%= review.id %>?_method=DELETE" method="POST">
-    <input type="submit" class="btn btn-danger confirmation" value="Delete">
+    <input type="submit" class="confirmation" value="Delete">
   </form>
 </div>
 <% } %>
