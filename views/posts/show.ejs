@@ -1,18 +1,10 @@
 <% layout('layouts/post-show-layout') -%>
 
 
-<h1><%= post.title %>
-</h1>
-
-<div>
-  <%= post.price %>
-</div>
-<div>
-  <%= post.description %>
-</div>
-<div>
-  <%= post.location %>
-</div>
+<h1><%= post.title %></h1>
+<div>Price: <%= post.price %></div>
+<div><%= post.description %></div>
+<div><%= post.location %></div>
 <div>
   <% post.images.forEach(function(image) { %>
   <img src="<%=image.url %>" width="220px">
