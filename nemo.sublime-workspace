@@ -1,0 +1,716 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font",
+				"font-synthesis"
+			],
+			[
+				"bahia",
+				"bahia"
+			],
+			[
+				"small",
+				"small-collapse"
+			],
+			[
+				"conta",
+				"contact-us-header"
+			],
+			[
+				"large",
+				"large-6"
+			],
+			[
+				"cont",
+				"container"
+			],
+			[
+				"grid",
+				"grid-x"
+			],
+			[
+				"imaged",
+				"imagedestroy"
+			],
+			[
+				"_or",
+				"_originalheight"
+			],
+			[
+				"_",
+				"_originalwidth"
+			],
+			[
+				"imagecopy",
+				"imagecopyresampled"
+			],
+			[
+				"_thumb",
+				"_thumbheight"
+			],
+			[
+				"_thum",
+				"_thumbwidth"
+			],
+			[
+				"_ori",
+				"_original"
+			],
+			[
+				"_original",
+				"_originalwidth"
+			],
+			[
+				"original",
+				"_originalwidth"
+			],
+			[
+				"preg",
+				"preg_replace"
+			],
+			[
+				"thumb",
+				"_thumbwidth"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"pr",
+				"print_r"
+			],
+			[
+				"file_",
+				"file_get_contents"
+			],
+			[
+				"pri",
+				"print_r"
+			],
+			[
+				"get",
+				"getMaxSize"
+			],
+			[
+				"ob_en",
+				"ob_end_clean"
+			],
+			[
+				"ob_end",
+				"ob_end_flush"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"opt",
+				"option\tTag"
+			],
+			[
+				"ht",
+				"htmlspecialchars"
+			],
+			[
+				"midd",
+				"middle_name"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"text",
+				"text-orientation"
+			],
+			[
+				"t",
+				"title\tAttr"
+			],
+			[
+				"page",
+				"page_general"
+			],
+			[
+				"session",
+				"session_name"
+			],
+			[
+				"bgco",
+				"background-color"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"date_def",
+				"date_default_timezone_set"
+			],
+			[
+				"ob_",
+				"ob_flush"
+			],
+			[
+				"sess",
+				"session_start"
+			],
+			[
+				"ob",
+				"ob_start"
+			],
+			[
+				"posted",
+				"posted_on"
+			],
+			[
+				"val",
+				"valign"
+			],
+			[
+				"ce",
+				"cellspacing\tAttr"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"bA",
+				"background-color"
+			],
+			[
+				"w",
+				"words"
+			],
+			[
+				"is_nu",
+				"is_numeric"
+			],
+			[
+				"sub",
+				"subject"
+			],
+			[
+				"s",
+				"see"
+			],
+			[
+				"spam",
+				"spam_scrubber"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"subm",
+				"submitted"
+			],
+			[
+				"tmp",
+				"tmp_name"
+			],
+			[
+				"e_",
+				"e_location"
+			],
+			[
+				"e",
+				"e_location"
+			],
+			[
+				"et",
+				"et"
+			],
+			[
+				"e_d",
+				"e_date"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"new",
+				"newdate"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"ed",
+				"e_day"
+			],
+			[
+				"cu",
+				"cutoff"
+			],
+			[
+				"html",
+				"htmlentities"
+			],
+			[
+				"strip",
+				"strip_tags"
+			],
+			[
+				"ma",
+				"maxlength\tAttr"
+			],
+			[
+				"mysqli_fetc",
+				"mysqli_fetch_array"
+			],
+			[
+				"is_n",
+				"is_numeric"
+			],
+			[
+				"ro",
+				"mysqli_num_rows"
+			],
+			[
+				"mysql",
+				"mysql_connect"
+			],
+			[
+				"p",
+				"password"
+			],
+			[
+				"m",
+				"maxlength\tAttr"
+			],
+			[
+				"include",
+				"include_once"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"mys",
+				"mysql_error"
+			],
+			[
+				"em",
+				"email"
+			],
+			[
+				"last",
+				"last_name"
+			],
+			[
+				"firs",
+				"first_name"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "views/posts/show.ejs",
+			"settings":
+			{
+				"buffer_size": 3988,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 179.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Material",
+				"Material Theme: Activate theme"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"PHP Code Sniffer: ",
+				"PHP Code Sniffer: Sniff this file"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: scss",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/michaelkarr/Sites/nemo",
+		"/Users/michaelkarr/Sites/nemo/views",
+		"/Users/michaelkarr/Sites/nemo/views/posts"
+	],
+	"file_history":
+	[
+		"/Users/michaelkarr/Downloads/surf-shop/app2.js",
+		"/Users/michaelkarr/Downloads/0-surf-shop/routes/users.js",
+		"/Users/michaelkarr/Downloads/phpmyql3_scripts 2/sql_utf8.sql",
+		"/Users/michaelkarr/Library/Mobile Documents/com~apple~CloudDocs/pwa-class/idb-03--write-data/public/sw.js",
+		"/Users/michaelkarr/Library/Mobile Documents/com~apple~CloudDocs/vue-class/Exercise 3/app.js",
+		"/Users/michaelkarr/Library/Caches/Cleanup At Startup/Transmit/5A30851F-5B13-42E0-BB69-91F0791AAB17/app.css",
+		"/Users/michaelkarr/Downloads/idb.js",
+		"/Users/michaelkarr/Downloads/idb-01--added-firebase-source/public/src/js/feed.js",
+		"/Users/michaelkarr/Downloads/parallax/css/custom.css",
+		"/Users/michaelkarr/Downloads/7_4_project_files/storybooks/config/keys.js",
+		"/Users/michaelkarr/Downloads/7_4_project_files/storybooks/config/passport.js",
+		"/Users/michaelkarr/Downloads/7_4_project_files/storybooks/routes/auth.js",
+		"/Users/michaelkarr/Downloads/5_2_project_files/vidjot/routes/users.js",
+		"/Users/michaelkarr/Library/Mobile Documents/com~apple~CloudDocs/ReactClassGrider/src/app.js",
+		"/Users/michaelkarr/Downloads/5_9_project_files/vidjot/helpers/auth.js",
+		"/Users/michaelkarr/Downloads/client_secret_822570313051-oq86fi6ljapku4e0csesphukbueqkqam.apps.googleusercontent.com.json",
+		"/Users/michaelkarr/Downloads/4_6_project_files/vidjot/app.js",
+		"/Users/michaelkarr/Documents/todomvc/examples/jquery/js/app.js",
+		"/Users/michaelkarr/Sites/mdkarr01/stylesheets/app.css",
+		"/Users/michaelkarr/Sites/mdkarr01/README.md",
+		"/Users/michaelkarr/Sites/mdkarr01/index.php",
+		"/Users/michaelkarr/Documents/zenotes/src/js/index.js",
+		"/Users/michaelkarr/Documents/zenotes/src/js/utils/guid.js",
+		"/Users/michaelkarr/Sites/vue-hackernews-2.0/manifest.json",
+		"/Users/michaelkarr/Sites/mdkarr01/main.php",
+		"/Users/michaelkarr/Library/Application Support/Sublime Text 3/Packages/Phpcs/phpcs.sublime-settings",
+		"/Users/michaelkarr/Library/Application Support/Sublime Text 3/Packages/Foundation/foundation.sublime-settings",
+		"/Users/michaelkarr/Library/Application Support/Sublime Text 3/Packages/PHPTools/PHPTools.sublime-settings",
+		"/Users/michaelkarr/Sites/gillespie/css/app.css",
+		"/Users/michaelkarr/Sites/gillespie/bio.php",
+		"/Users/michaelkarr/Sites/gillespie/journal.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/post.php",
+		"/Users/michaelkarr/mindfitness/node_modules/babel-preset-es2015/node_modules/babel-plugin-transform-es2015-modules-commonjs/node_modules/babel-runtime/node_modules/core-js/library/modules/_array-reduce.js",
+		"/Users/michaelkarr/mindfitness/node_modules/babel-preset-es2015/node_modules/babel-plugin-transform-es2015-unicode-regex/node_modules/babel-helper-regex/node_modules/lodash/_apply.js",
+		"/Users/michaelkarr/Sites/vikingsewing/src/assets/scss/app.scss",
+		"/Users/michaelkarr/Sites/vikingsewing/src/assets/scss/_settings.scss",
+		"/Users/michaelkarr/Sites/vikingsewing/src/pages/index.html",
+		"/Users/michaelkarr/Sites/vikingsewing/src/assets/scss/components/building-blocks/_responsive-hero-section.scss",
+		"/Users/michaelkarr/Sites/vikingsewing/src/assets/scss/components/building-blocks/_full-width-testimonial.scss",
+		"/Users/michaelkarr/Sites/vikingsewing/src/assets/scss/components/building-blocks/_contact-us-section.scss",
+		"/Users/michaelkarr/Sites/vikingsewing/node_modules/foundation-sites/scss/_global.scss",
+		"/Users/michaelkarr/Sites/vikingsewing/node_modules/foundation-sites/scss/components/_button.scss",
+		"/Users/michaelkarr/Sites/vikingsewing/node_modules/foundation-sites/scss/util/_color.scss",
+		"/Users/michaelkarr/Sites/vikingsewing/dist/index.html",
+		"/Users/michaelkarr/Sites/php-solutions-10-master/phpsols/ch05/contact_06.php",
+		"/Users/michaelkarr/Sites/mike/admin/register.php",
+		"/Users/michaelkarr/Sites/mike/admin/password1.php",
+		"/Users/michaelkarr/Sites/vikingsewing/node_modules/foundation-sites/scss/components/_top-bar.scss",
+		"/Users/michaelkarr/Sites/vikingsewing/node_modules/foundation-sites/vendor/jquery.autocomplete/content/styles.css",
+		"/Users/michaelkarr/Sites/vikingsewing/dist/assets/css/app.css",
+		"/Users/michaelkarr/Sites/vikingsewing/node_modules/gulp-clean-css/node_modules/clean-css/lib/optimizer/level-2/break-up.js",
+		"/Users/michaelkarr/Sites/vikingsewing/node_modules/browser-sync/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/ultron/test.js",
+		"/Users/michaelkarr/Sites/vikingsewing/src/styleguide/template.html",
+		"/Users/michaelkarr/Sites/vikingsewing/index.html",
+		"/Users/michaelkarr/Sites/vikingsewing/css/foundation.css",
+		"/Users/michaelkarr/Sites/vikingsewing/css/app.css",
+		"/Users/michaelkarr/Sites/gillespie/includes/footer.inc.php",
+		"/Users/michaelkarr/Downloads/all-f6-templates/news-magazine.html",
+		"/Users/michaelkarr/Sites/mike/admin/add_date3.php",
+		"/Users/michaelkarr/Sites/mike/admin/add_date.php",
+		"/Users/michaelkarr/Sites/mike/admin/stylesheets/style.css",
+		"/Users/michaelkarr/Sites/mike/admin/class/add_print.php",
+		"/Users/michaelkarr/php_scriptx/ch17/admin/add_print.php",
+		"/Users/michaelkarr/Sites/mike/mike.sublime-project",
+		"/Users/michaelkarr/Downloads/foundation-6.4.1-custom (1)/index.html",
+		"/Users/michaelkarr/Sites/gillespie/admin/classes/Ps2/Thumbnails.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/classes/Ps2/ThumbnailUpload.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/classes/Ps2/Upload.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/classes/Ps2/create_thumb_upload.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/classes/Ps2/create_thumb.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/classes/Ps2/file.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/classes/Ps2/fopen_read.php",
+		"/Users/michaelkarr/Sites/mike/admin/edit_dates.php",
+		"/Users/michaelkarr/Sites/gillespie/contact.php",
+		"/Users/michaelkarr/Sites/gillespie/includes/block.inc.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/classes/Ps2/download.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/classes/Ps2/image_dl.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/classes/Ps2/imagelist.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/classes/Ps2/newsfeed.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/classes/Ps2/buildlist.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/file_upload.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/post_form.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/read.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/view_print.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/show_image.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/images.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/view_post.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/includes/header.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/post2.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/admin/add_print.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/save.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/includes/footer.inc.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/admin/add_post.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/index2.php",
+		"/Users/michaelkarr/Sites/mike/admin/save.php",
+		"/Users/michaelkarr/Sites/mike/admin/view_dates.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/classes/Ps2/test.php",
+		"/Users/michaelkarr/Sites/mike/admin/add_print3.php",
+		"/Users/michaelkarr/Sites/mike/admin/add_print.php",
+		"/Users/michaelkarr/Sites/mike/admin/add_print2.php",
+		"/Users/michaelkarr/Downloads/php-solutions-10-master/phpsols/ch06/file_upload_05.php",
+		"/Users/michaelkarr/Downloads/php-solutions-10-master/phpsols/ch06/file_upload_07.php",
+		"/Users/michaelkarr/Downloads/phpsols/ch06/multi_upload_02.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/image_added.php",
+		"/Users/michaelkarr/Sites/mike/admin/edit_bio.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/includes/config.inc.php",
+		"/Users/michaelkarr/Sites/gillespie/video.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/index.html",
+		"/Users/michaelkarr/Downloads/phpsols/ch06/PhpSolutions/File/Upload.php",
+		"/Users/michaelkarr/Downloads/phpsols/ch06/PhpSolutions/File/Upload_01.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/file_upload2.php",
+		"/Users/michaelkarr/Sites/gillespie/podcast.php",
+		"/Users/michaelkarr/Sites/gillespie/includes/jscript.inc.php",
+		"/Users/michaelkarr/Sites/gillespie/index.php",
+		"/Users/michaelkarr/Desktop/stuff/wordpress/wp-content/themes/zinnia/includes/ace_functions.php",
+		"/Users/michaelkarr/Sites/index.html",
+		"/Users/michaelkarr/Sites/gillespie/includes/header.php",
+		"/Users/michaelkarr/Sites/gillespie/admin/includes/header.html",
+		"/Users/michaelkarr/Sites/web-assets/html5up-photon/index.html",
+		"/Users/michaelkarr/Sites/index1.html",
+		"/Users/michaelkarr/Sites/index.php",
+		"/Users/michaelkarr/Sites/gillespie/save.php",
+		"/Users/michaelkarr/Sites/gillespie/includes/hero.php",
+		"/Users/michaelkarr/Sites/gillespie/contact2.php",
+		"/Users/michaelkarr/Sites/gillespie/includes/album.inc.php",
+		"/Users/michaelkarr/Sites/mike/index.php",
+		"/Users/michaelkarr/Sites/gillespie/includes/config2.inc.php",
+		"/Users/michaelkarr/Sites/gillespie/.htaccess"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "views/posts/show.ejs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3988,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_savvy.repo_path": "/Users/michaelkarr/Sites/nemo",
+							"syntax": "Packages/EJS 2/EJS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "nemo.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"foundation-top-bar",
+				"node_modules/foundation-sites/scss/components/_top-bar.scss"
+			],
+			[
+				"components/building-blocks/contact-us-section",
+				"src/assets/scss/components/building-blocks/_contact-us-section.scss"
+			],
+			[
+				"",
+				"admin/delete_user.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 190.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
