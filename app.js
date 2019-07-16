@@ -43,11 +43,8 @@ app.use(express.static('public'));
 
 
 app.use(logger('dev'));
-app.use(express.json());
-// THIS IS SET TO FALSE BY DEFAULT IF YOU USE post[whatever] IN FORMS CHANGE TO TRUE!!!!!!!
-app.use(express.urlencoded({
-  extended: true
-}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
