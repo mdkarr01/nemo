@@ -1,22 +1,21 @@
 require('dotenv').config()
 
 const express = require('express');
-const path = require('path');
 const engine = require('ejs-mate');
-// const favicon = require('serve-favicon');
+const path = require('path');
+const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const chalk = require('chalk');
 const passport = require('passport');
 const User = require('./models/user');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 
-//Create 40 new posts for testing purposes
-// const seedPosts = require('./seeds');
-// seedPosts();
+// Create 40 new posts for testing purposes
+const seedPosts = require('./seeds');
+seedPosts();
 
 const indexRouter = require('./routes/index');
 const postsRouter = require('./routes/posts');
@@ -39,6 +38,9 @@ db.once('open', () => {
 app.engine('ejs', engine);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(express.static('public'));
+
 
 app.use(logger('dev'));
 app.use(express.json());
