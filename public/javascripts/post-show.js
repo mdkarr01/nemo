@@ -30,3 +30,7 @@ $('.toggle-edit-form').on('click', function () {
 $('.clear-rating').click(function () {
   $(this).siblings('input-no-rate').click();
 });
+
+$('.confirmation').on('click', function () {
+  return confirm('Are you sure you would like to delete?');
+});
