@@ -335,14 +335,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "views/posts/show.ejs",
-			"settings":
-			{
-				"buffer_size": 3988,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -415,11 +407,19 @@
 	"expanded_folders":
 	[
 		"/Users/michaelkarr/Sites/nemo",
+		"/Users/michaelkarr/Sites/nemo/controllers",
+		"/Users/michaelkarr/Sites/nemo/public",
+		"/Users/michaelkarr/Sites/nemo/public/javascripts",
 		"/Users/michaelkarr/Sites/nemo/views",
 		"/Users/michaelkarr/Sites/nemo/views/posts"
 	],
 	"file_history":
 	[
+		"/Users/michaelkarr/Sites/nemo/controllers/posts.js",
+		"/Users/michaelkarr/Sites/nemo/public/javascripts/post-show.js",
+		"/Users/michaelkarr/Sites/nemo/views/posts/show.ejs",
+		"/Users/michaelkarr/Sites/nemo/views/layouts/post-show-layout.ejs",
+		"/Users/michaelkarr/Sites/nemo/nemo.sublime-project",
 		"/Users/michaelkarr/Downloads/surf-shop/app2.js",
 		"/Users/michaelkarr/Downloads/0-surf-shop/routes/users.js",
 		"/Users/michaelkarr/Downloads/phpmyql3_scripts 2/sql_utf8.sql",
@@ -542,12 +542,7 @@
 		"/Users/michaelkarr/Sites/index1.html",
 		"/Users/michaelkarr/Sites/index.php",
 		"/Users/michaelkarr/Sites/gillespie/save.php",
-		"/Users/michaelkarr/Sites/gillespie/includes/hero.php",
-		"/Users/michaelkarr/Sites/gillespie/contact2.php",
-		"/Users/michaelkarr/Sites/gillespie/includes/album.inc.php",
-		"/Users/michaelkarr/Sites/mike/index.php",
-		"/Users/michaelkarr/Sites/gillespie/includes/config2.inc.php",
-		"/Users/michaelkarr/Sites/gillespie/.htaccess"
+		"/Users/michaelkarr/Sites/gillespie/includes/hero.php"
 	],
 	"find":
 	{
@@ -582,40 +577,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "views/posts/show.ejs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3988,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"git_savvy.repo_path": "/Users/michaelkarr/Sites/nemo",
-							"syntax": "Packages/EJS 2/EJS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -650,9 +613,17 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 108.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.nodejs":
+	{
+		"height": 108.0
 	},
 	"pinned_build_system": "",
 	"project": "nemo.sublime-project",
